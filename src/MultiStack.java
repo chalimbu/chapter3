@@ -73,17 +73,7 @@ public class MultiStack {
 
     /*return value from stack*/
     public int pop(int stackNum){
-        if (stackNum<0 || stackNum>= info.length){
-            throw new RuntimeException("Stack out of bounds");
-        }
-        StackInfo stack=info[stackNum];
-        if(stack.isEmpty()){
-            throw new RuntimeException("Stack is empty");
-        }
-        int value=values[stack.lastElementIndex()];
-        values[stack.lastElementIndex()]=0;
-        stack.size--;
-        return value;
+        //COMPLETAR
 
     }
 
