@@ -92,7 +92,10 @@ public class MultiStack {
         return values[stack.lastElementIndex()];
     }
 
-
+    public boolean isEmpty(int stackNum){
+        StackInfo stack = info[stackNum];
+        return stack.isEmpty();
+    }
 
 
     /*Expand stack by shifting over other stacks*/
@@ -145,5 +148,26 @@ public class MultiStack {
             size+=sd.size;
         }
         return size;
+    }
+
+    public static void main(String args[]){
+        MultiStack ms=new MultiStack(3,2);
+        ms.push(0,1);
+        ms.push(0,2);
+        System.out.println("push 1 and 2, pop"+ms.pop(0));
+        System.out.println("peek "+ms.peek(0));
+        ms.push(1,3);
+        ms.push(1,4);
+        ms.push(1,5);
+        System.out.println("peek after pushing 3,4,5 to 1 "+ms.peek(1));
+        System.out.println("is empty for stack that was not touched "+ms.isEmpty(2));
+        /*
+        * expected output
+        * push 1 and 2, pop2
+        peek 1
+        //// Shifting2
+        peek after pushing 3,4,5 to 1 5
+        is empty for stack that was not touched true
+        * */
     }
 }
