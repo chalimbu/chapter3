@@ -47,13 +47,7 @@ public class MultiStack {
 
     /* Adjust index to be within the range of  0 -> length -1 */
     private int adjustIndex(int index){
-        /* Javas's mod operator can return neg values. For example, (-11%5) will return -1, not 4(probably 1)
-        (since we're wrapping around the index)
-         */
-        int max=values.length;
-        /*el primer modulo max, me da que este entre negativos del tamaño del index, al sumarle el tamaño real
-        * ya lo tengo positivo y solo me queda un modulo max para que quede dentro del tamaño positivo*/
-        return ((index%max)+max)%max;
+        //FILL THIS METHOD
     }
 
     /* push value onto stack num, shifting/expanding stacks as necesarry. Throws exception if all stack are full*/
